@@ -8,7 +8,7 @@ function Remove-FlexaDocMagicDash {
 	)
 	
 	if ($id) {
-		$null = Invoke-FlexaDocRequest -Method delete -Resource "/api/v1/magic_dash/$Id"
+		$null = Invoke-FlexaDocRequest -Method delete -Resource "/api/v1/fast_fact/$Id"
 	
 	} else {
 
@@ -21,7 +21,7 @@ function Remove-FlexaDocMagicDash {
 				
 			$JSON = $MagicDash | convertto-json
 	
-			$null = Invoke-FlexaDocRequest -Method delete -Resource "/api/v1/magic_dash" -body $JSON
+			$null = Invoke-FlexaDocRequest -Method delete -Resource "/api/v1/fast_fact" -body $JSON
 	
 		} else {
 			Write-Host "ERROR: Please set title and company_name" -ForegroundColor Red

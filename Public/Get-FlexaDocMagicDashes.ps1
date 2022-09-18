@@ -16,7 +16,7 @@ function Get-FlexaDocMagicDashes {
 	
 	$i = 1;
 	$AllDashes = do {
-		$Dashes = Invoke-FlexaDocRequest -Method get -Resource "/api/v1/magic_dash?page=$i&page_size=1000$($ResourceFilter)"
+		$Dashes = Invoke-FlexaDocRequest -Method get -Resource "/api/v1/fast_facts?page=$i&page_size=1000$($ResourceFilter)"
 		$i++
 		$Dashes
 	} while ($Dashes.count % 1000 -eq 0 -and $Dashes.count -ne 0)

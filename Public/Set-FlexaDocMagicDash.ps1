@@ -63,7 +63,7 @@ function Set-FlexaDocMagicDash {
 	
 	$JSON = $MagicDash | convertto-json
 	
-	$Response = Invoke-FlexaDocRequest -Method post -Resource "/api/v1/magic_dash" -body $JSON
+	$Response = Invoke-FlexaDocRequest -Method post -Resource "/api/v1/fast_fact" -body $JSON
 	
 	$Response
 }
